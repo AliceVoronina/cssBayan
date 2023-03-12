@@ -25,24 +25,22 @@ body {
 .main-container {
   margin: 0 auto;
   max-width: 80%;
-  padding: 1.25rem;
   cursor: pointer;
 }
 
 .main-title {
   font-style: normal;
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 2rem;
   line-height: 3.5rem;
   color: #000;
   letter-spacing: 0.125rem;
-  margin: 0 0 1.5rem 0;
+  padding: 0.5rem 1.25rem;
 }
 
 .meme-style {
-  width: 50%;
-  height: 50%;
-  transition: all 2s ease-in-out;
+  max-width: 70vw;
+  max-height: 50vh;
 }
 
 .acor-container {
@@ -50,7 +48,6 @@ body {
 }
 
 .acor-container .acor-body {
-  margin: 0 auto;
   max-height: 0;
   color: rgba(0, 0, 0, 0);
   background-color: #d3d8dc;
@@ -65,16 +62,15 @@ body {
   cursor: pointer;
   background-color: #95a4b1;
   display: block;
-  padding: 0.9375rem 1.25rem;
+  padding: 0.5rem 1.25rem;
   width: 100%;
   color: #BFE2FF;
   font-weight: 300;
   box-sizing: border-box;
-  z-index: 100;
   font-family: Arial, Helvetica, sans-serif; 
   font-style: normal;
   font-weight: bold;   
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin: 0 0 0.3rem;
   transition: color 1s;
 }
@@ -91,16 +87,17 @@ body {
 .acor-container input:checked + label {
   background-color: #ffffff;
   color: #000000;
-
   box-shadow: 0 0.5rem 1.625rem rgba(0,0,0,0.4), 0 28px 30px rgba(0,0,0,0.3);
 }
-.acor-container input:checked + label:before {
+
+.acor-item:hover label:before,
+.acor-item input:checked + label:before {
   transition: 2s;
-  transform: rotate(135deg);
+  transform: rotate(45deg);
 }
 
 .acor-item:hover .acor-body,
-.acor-container input:checked + label + .acor-body {
+.acor-item input:checked + label + .acor-body {
   transition: 2s;
   max-height: 100vh;
   margin-top: -0.3rem;
